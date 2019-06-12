@@ -1,0 +1,172 @@
+#menu {
+    position: absolute;
+    left: 50%;
+    margin-left: -120px;
+    top: 50%;
+    margin-top: -240px;
+    width: 640px;
+    height: 485px;
+    z-index: 10;
+    background-image: url('dino.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    opacity: 1;
+    box-shadow: 3px 3px 4px 1px rgba(0, 0, 0, 0.7);
+
+    /* box-shadow: 3px 3px 4px 1px rgba(0, 0, 0, 0.7); */
+    /* 產生陰影效果的語法box-shadow(包含六個參數)
+             * box-shadow: x y blur spread color inset;
+             * x-水平位移, y-垂直位移, blur-模糊強度, spread-擴散強度, color-陰影色彩, insert-內陰影
+             * x,y為必要值,blur不可為負,insert若無定義則為外陰影  */
+
+    /* 不允許玩家選取到任何內容 */
+    -webkit-user-select: none;
+    -moz-user-select: none;
+}
+
+#gameIntro {
+    position: absolute;
+    left: 50%;
+    margin-left: -120px;
+    top: 50%;
+    margin-top: -240px;
+    width: 640px;
+    height: 485px;
+    z-index: 5;
+    background-image: url('Intro.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    opacity: 1;
+
+}
+
+#gameTitle {
+    position: absolute;
+    top: 50px;
+    left: 40px;
+    font-size: 50px;
+    font-weight: bold;
+    color: rgb(150, 90, 180);
+    font-family: "華康中圓體","新細明體","Georgia","微軟正黑體";
+}
+
+#frame {
+    /* 令框架絕對水平置中 */
+    position: absolute;
+    left: 50%;
+    margin-left: -50px;
+    top: 50%;
+    margin-top: -240px;
+    border: double;
+    -webkit-transform: rotate(90deg);
+    -moz-transform: rotate(90deg);
+    -o-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    transform: rotate(90deg);
+}
+
+#gameover_win {
+    position: absolute;
+    width: 400px;
+    height: 470px;
+    border: solid;
+    border-color: aqua;
+    z-index: -30;
+    /* 不允許玩家選取到任何內容 */
+    -webkit-user-select: none;
+    -moz-user-select: none;
+}
+
+#gameover_lose {
+    position: absolute;
+    width: 400px;
+    height: 470px;
+    border: solid;
+    border-color: aqua;
+    z-index: -30;
+    /* 不允許玩家選取到任何內容 */
+    -webkit-user-select: none;
+    -moz-user-select: none;
+
+}
+
+#stage {
+    float: left;
+    width: 400px;
+    height: 470px;
+    border: solid;
+    border-color: aqua;
+    /* 不允許玩家選取到任何內容 */
+    -webkit-user-select: none;
+    -moz-user-select: none;
+
+}
+
+#panel {
+
+position: relative;
+
+    width: 430px;
+    height: 180px;
+    border: solid;
+    border-color: blue;
+    background-color: orange;
+    padding: 20px;
+    font-size: 28px;
+    font-family: "華康中圓體","微軟正黑體";
+    box-shadow: 2px 2px 6px 0px rgba(0, 0, 0, 0.7) inset;
+    /* 不允許玩家選取到任何內容 */
+    -webkit-user-select: none;
+    -moz-user-select: none;
+
+
+}
+
+#item {
+    clear: both;
+}
+
+.btn {
+    width: 140px;
+    height: 40px;
+    font-size: 20px;
+    font-family: "華康中圓體","微軟正黑體";
+    box-shadow: 2px 2px 3px 1px rgba(0, 0, 0, 0.6);
+}
+
+#onePlayer {
+    position: absolute;
+    top: 140px;
+    left: 30px;
+}
+
+#intro {
+    position: absolute;
+    top: 200px;
+    left: 30px;
+}
+
+#authors {
+    position: absolute;
+    top: 260px;
+    left: 30px;
+}
+
+#exitIntro {
+    position: absolute;
+    top: 13px;
+    left: 270px;
+    background-color: yellow;
+}
+
+html {
+     height: 100%;
+ }
+
+body {
+    background-image: url(background.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+}

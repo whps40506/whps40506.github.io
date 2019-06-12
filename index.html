@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang = "en">
+<head>
+    <meta charset="UTF-8" />
+    <title>恐龍彈幕遊戲</title>
+
+    <!--框架原始碼來源: http://my.oschina.net/u/1253039/blog/193752 -->
+
+    <link rel="stylesheet" type="text/css" href="style.css" />
+</head>
+<body onload="load()">
+
+<div id="menu">
+    <div id="gameTitle">射擊遊戲！</div>
+    <input class="btn" id="onePlayer" type="button" value="開始遊戲" onclick="start()" />
+    <input class="btn" id="intro" type="button" value="操作介紹" onclick="intro()" />
+</div>
+<div id="gameIntro">
+    <input class="btn" id="exitIntro" type="button" value="返回主畫面" onclick="exitIntro()" />
+</div>
+
+<!--包裹遊戲畫面和狀態面板的大框架-->
+<div id="frame">
+    <canvas id="gameover_win"></canvas>
+    <canvas id="gameover_lose"></canvas>
+    <!--遊戲舞台-->
+    <canvas id="stage"></canvas>
+    <!--顯示遊戲狀態的面板-->
+    <div id="item" hidden>
+        <canvas id="player"></canvas><!--玩家-->
+        <canvas id="enemy"></canvas> <!--電腦角色-->
+        <canvas id="enemy_1"></canvas> <!--電腦角色-->
+        <canvas id="ammo"></canvas> <!--電腦彈幕-->
+        <canvas id="ammo2"></canvas> <!--電腦彈幕-->
+        <canvas id="ammo3"></canvas> <!--電腦彈幕-->
+        <canvas id="playerAmmo"></canvas>  <!--玩家子彈-->
+        <audio id="bgm" loop>
+            <source src="" type="audio/mp3" />
+        </audio>
+    </div>
+</div>
+<div id="panel">
+    <!--血量-->
+    <b id="enemy_HP">EnemyHP:100+50*n</b><br />
+    <b id="HP">HP:100</b><br />
+    <br />
+    <b >遊戲時間:</b>
+    <span style="color: white" id="count">無敵
+        <span id="countdown">次數: 1</span>
+    </span>
+    <br />
+    <b id="timer"></b><br />
+    <br />
+
+    <b style="color:white">音量控制</b>
+    <input type="range" id="volControl" min="0" max="1" step="0.1" value="0.5" />
+    <br />
+    <br />
+    <input class="btn" type="button" value="暫停" id="pause" onclick="pause()" />
+    <br />
+    <br />
+    <input class="btn" type="button" value="回到主畫面" onclick="exit()" />
+    <br />
+    <br />
+    <input class="btn" type="button" value="調整難度" id="differ" onclick="chose()" />
+    <div style="color:white">難度
+        <span id = "diff" >0</span>
+    </div>
+
+</div>
+
+<script type="text/javascript" src="01.js" defer></script>
+
+</body>
+</html>
